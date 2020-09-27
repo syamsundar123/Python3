@@ -1,0 +1,20 @@
+def snakePattern(matrix):
+    rows = len(matrix)
+    columns = len(matrix[0])
+    c = []
+    
+    for row in range(rows):
+        
+        if row % 2 == 0:
+
+            for column in range(columns):
+                c.append(matrix[row][column])
+
+        else:
+            
+            for column in range(columns - 1, -1, -1):
+                c.append(matrix[row][column])
+               
+        
+
+    return c
