@@ -1,0 +1,15 @@
+def multiplyMatrix(A,B):
+    rows1 = len(A)
+    columns1 = len(A[0])
+    rows2 = len(B)
+    columns2 = len(B[0])
+    C = []
+    
+    if columns1 != rows2:
+        return C
+    C = [[0 for _ in range(columns2)] for _ in range(0,rows1)]
+    for row in range(rows1):
+        for column in range(columns2):
+            for k in range(rows2):
+                C[row][column] += A[row][k] * B[k][column]
+    return C
