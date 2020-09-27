@@ -1,0 +1,15 @@
+
+def sumMatrix(A,B):
+    columns = len(A[0])
+    rows = len(A)
+    columns2 = len(B[0])
+    rows2 = len(B)
+    if (columns != columns2) or (rows != rows2):
+        return str("")
+        
+    for row in range(rows):
+        for column in range(columns):
+            A[row][column] = A[row][column] + B[row][column]
+    
+    
+    return A
