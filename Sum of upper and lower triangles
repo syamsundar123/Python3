@@ -1,0 +1,13 @@
+def sumTriangles(matrix, n):
+    rows = len(matrix)
+    columns = len(matrix[0])
+    upper_sum = 0
+    lower_sum = 0
+    for row in range(rows):
+        for column in range(columns):
+            if row <= column:
+                upper_sum += matrix[row][column]
+            if row >= column:
+                lower_sum += matrix[row][column]
+    l = [upper_sum,lower_sum]
+    return l
