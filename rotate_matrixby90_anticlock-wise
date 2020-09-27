@@ -1,0 +1,23 @@
+def transpose(m):
+    
+    rows = len(m)
+    columns = len(m[0])
+
+    for row in range(rows):
+        for column in range(columns):
+            if row < column:
+                m[row][column],m[column][row] = m[column][row],m[row][column]
+                
+    return m
+def rotateby90(a, n): 
+    a = transpose(a)
+    
+    for i in range(n):
+        low = 0
+        high = n - 1
+        
+        while low < high:
+            a[low][i],a[high][i] = a[high][i],a[low][i]
+            low += 1
+            high -= 1
+    return a
