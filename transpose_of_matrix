@@ -1,0 +1,12 @@
+
+def transpose(m, n):
+    
+    rows = len(m)
+    columns = len(m[0])
+
+    for row in range(rows):
+        for column in range(columns):
+            if row < column:
+                m[row][column],m[column][row] = m[column][row],m[row][column]
+                
+    return m
